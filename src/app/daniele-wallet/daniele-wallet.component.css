@@ -1,0 +1,42 @@
+.carteira {
+  background-color: #f9c74f;
+  text-align: center;
+}
+
+.form-control {
+  margin: auto;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button button {
+  box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px red;
+  margin-bottom: 30px;
+}
+
+.compra {
+  color: red;
+}
+
+.venda {
+  color: red;
+}
+
+.total {
+  color: red;
+}

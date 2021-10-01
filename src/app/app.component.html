@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/']"
+      >Projeto Angular - Carteira Digital</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['daniele-currency']">Currency</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['daniele-wallet']">Wallet</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="ident">
+  <h3>Olá,</h3>
+  <p>
+    meu nome é Daniele dos Santos Costa, sou matriculada com a RA:
+    00508*******9, clique para ver meu
+    <a href="https://github.com/costadaniele" target="_blank">Github</a>.
+  </p>
+</div>
+
+<div class="temp">
+  <p>Contagem de atualização dos valores</p>
+  <p class="num">{{ danieleWalletService.getCount() }}</p>
+</div>
+
+<div class="vl_atual">
+  <p>Valores atuais</p>
+  <p>
+    <span [innerHTML]="this.getCurrentPrice().bpi.USD.symbol"></span>
+    {{ this.getCurrentPrice().bpi.USD.rate }}{{ this.getCompareUSD() }}
+  </p>
+  <p>
+    <span [innerHTML]="this.getCurrentPrice().bpi.EUR.symbol"></span>
+    {{ this.getCurrentPrice().bpi.EUR.rate }}{{ this.getCompareEUR() }}
+  </p>
+</div>
+
+<button
+  class="navbar-toggler"
+  type="button"
+  data-toggle="collapse"
+  data-target="#navbarNav"
+  aria-controls="navbarNav"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+>
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<router-outlet></router-outlet>

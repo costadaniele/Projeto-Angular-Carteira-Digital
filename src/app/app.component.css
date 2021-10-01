@@ -1,0 +1,30 @@
+.temp {
+  text-align: center;
+  background-color: #202124ff;
+  color: #e12f54ff;
+}
+
+.num {
+  color: #979dac;
+}
+
+p {
+  font-family: Lato;
+}
+
+.ident {
+  background-color: #202124ff;
+  color: #979dac;
+  padding: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.vl_atual {
+  padding: 15px;
+  background-color: #f9c74f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
