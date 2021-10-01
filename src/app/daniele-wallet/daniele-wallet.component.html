@@ -1,0 +1,48 @@
+<div class="carteira">
+  <h3>Qt. Bitcoins disponíveis: {{ getSaldo() }}</h3>
+
+  <div>
+    <h4>Compra</h4>
+  </div>
+  <input
+    class="form-control"
+    type="number"
+    step="0.00001"
+    min="0"
+    [(ngModel)]="compra"
+  />
+
+  <div>
+    <h2>{{ getCompraBitcoin() }}</h2>
+  </div>
+
+  <div class="compra">
+    <p>Valor: {{ getValorCompra() | currency: 'USD' }}</p>
+  </div>
+
+  <div><h4>Venda</h4></div>
+  <input
+    class="form-control"
+    type="number"
+    step="0.00001"
+    min="0"
+    [(ngModel)]="venda"
+  />
+
+  <div>
+    <h3>{{ getVendaBitcoin() }}</h3>
+  </div>
+
+  <div class="venda">Valor: {{ getValorVenda() | currency: 'USD' }}</div>
+  <br />
+  <div>
+    <h3>Total de Bitcoin: {{ getTotal() }}</h3>
+  </div>
+  <div class="total">
+    <p>Valor Total de Bitcoin: {{ getValorTotal() | currency: 'USD' }}</p>
+  </div>
+  <br />
+  <div class="button">
+    <button (click)="setSaldo()">Limpar</button>
+  </div>
+</div>

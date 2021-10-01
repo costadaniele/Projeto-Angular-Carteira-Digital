@@ -1,0 +1,16 @@
+<div *ngIf="getCurrentPrice()">
+  <div class="table">
+    <table>
+      <tr>
+        <th>Data/hora</th>
+        <th>USD</th>
+        <th>EUR</th>
+      </tr>
+      <tr *ngFor="let price of this.danieleWalletService.updateList">
+        <td>{{ price.timestamp | date: 'full' }}</td>
+        <td>{{ price.USD | currency }}</td>
+        <td>{{ price.EUR | currency }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
